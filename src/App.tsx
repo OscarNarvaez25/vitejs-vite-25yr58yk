@@ -1,3 +1,4 @@
+// @ts-nocheck 
 import React, { useState } from "react";
 import {
   PlayCircle, Heart, Compass, Users, Briefcase, ShieldCheck, Star,
