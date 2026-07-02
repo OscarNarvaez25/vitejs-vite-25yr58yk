@@ -198,7 +198,17 @@ export default function App() {
       <div style={{ maxWidth: 860, width: "100%", margin: "0 auto", padding: "28px 20px 48px" }}>
           {step === "bienvenida" && (
             <div>
-              <VideoCover title="Video institucional CESUMA" subtitle="Pablo Lamamié de Clairac · Rector" grad={GRAD} big />
+              <div style={{ borderRadius: 16, overflow: "hidden", aspectRatio: "16/9", width: "100%" }}>
+  <iframe
+    width="100%" height="100%"
+    src="https://www.youtube.com/embed/HlG32u5JllA"
+    title="Bienvenida Rector CESUMA"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+    style={{ display: "block", minHeight: 260 }}
+  />
+</div>
               <Card className="mt-6">
                 <Quote size={32} style={{ color: `${C.orange}55` }} />
                 <p className="text-xl font-bold mt-2 mb-2" style={{ color: C.navy }}>"Hoy inicias una etapa para Aprender, Emprender y Trascender"</p>
@@ -231,8 +241,24 @@ export default function App() {
             <div>
               <StepHeader icon={Users} title="Mapa de valor" sub="Cada líder te explica en 60 segundos qué hace su área, en qué te puede ayudar y en qué necesita tu ayuda." />
               <div className="grid sm:grid-cols-2 gap-4 mb-6">
-                {MAPA_VALOR.map((m, i) => (
-                  <div key={m.area}><VideoCover title={m.area} subtitle={m.lead} grad={GRADS[i % GRADS.length]} /><p className="text-sm italic mt-2 px-1" style={{ color: C.sub }}>"{m.quote}"</p></div>
+              {MAPA_VALOR.map((m, i) => (
+  <div key={m.area}>
+    {m.videoId ? (
+      <div style={{ borderRadius: 16, overflow: "hidden", aspectRatio: "16/9", width: "100%" }}>
+        <iframe
+          width="100%" height="100%"
+          src={`https://www.youtube.com/embed/${m.videoId}`}
+          title={`Video ${m.area}`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{ display: "block", minHeight: 180 }}
+        />
+      </div>
+    ) : (
+      <VideoCover title={m.area} subtitle={m.lead} grad={GRADS[i % GRADS.length]} />
+    )}
+    <p className="text-sm italic mt-2 px-1" style={{ color: C.sub }}>"{m.quote}"</p></div>
                 ))}
               </div>
               <Card>
