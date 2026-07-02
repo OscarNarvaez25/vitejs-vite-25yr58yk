@@ -24,10 +24,10 @@ const GRADS = [
 const VALORES = ["Servicio", "Excelencia", "Cercanía", "Integridad", "Mejora continua"];
 
 const MAPA_VALOR = [
-  { area: "Academia", lead: "Diseño Curricular", quote: "Transformamos la teoría en impacto real para la vida práctica de nuestros alumnos." },
-  { area: "Comercial", lead: "Ventas y Marketing", quote: "Somos el motor de democratización educativa; llevamos luz a sectores vulnerables." },
-  { area: "Atención", lead: "Servicios Escolares", quote: "Acompañamos cada paso del estudiante, eliminando fricciones en su formación." },
-  { area: "Operaciones", lead: "Administración", quote: "Garantizamos la estabilidad y excelencia operativa para que la misión no se detenga." },
+  { area: "Academia", lead: "Diseño Curricular", quote: "Transformamos la teoría en impacto real para la vida práctica de nuestros alumnos.", videoId: null },
+  { area: "Comercial", lead: "Ventas y Marketing", quote: "Somos el motor de democratización educativa; llevamos luz a sectores vulnerables.", videoId: "Sj78Ai-rqSg" },
+  { area: "Atención", lead: "Servicios Escolares", quote: "Acompañamos cada paso del estudiante, eliminando fricciones en su formación.", videoId: null },
+  { area: "Operaciones", lead: "Administración", quote: "Garantizamos la estabilidad y excelencia operativa para que la misión no se detenga.", videoId: null },
 ];
 
 const PRINCIPIOS = [
