@@ -24,10 +24,10 @@ const GRADS = [
 const VALORES = ["Servicio", "Excelencia", "Cercanía", "Integridad", "Mejora continua"];
 
 const MAPA_VALOR = [
-  { area: "Academia", lead: "Diseño Curricular", quote: "Transformamos la teoría en impacto real para la vida práctica de nuestros alumnos.", videoId: null },
-  { area: "Comercial", lead: "Ventas y Marketing", quote: "Somos el motor de democratización educativa; llevamos luz a sectores vulnerables.", videoId: "Sj78Ai-rqSg" },
-  { area: "Atención", lead: "Servicios Escolares", quote: "Acompañamos cada paso del estudiante, eliminando fricciones en su formación.", videoId: null },
-  { area: "Operaciones", lead: "Administración", quote: "Garantizamos la estabilidad y excelencia operativa para que la misión no se detenga.", videoId: null },
+  { area: "Academia", nombre: "Sandra Salazar", cargo: "Gerencia Académica", videoId: "DndBb7k9VVE" },
+  { area: "Comercial", nombre: "Heldrich Santizo", cargo: "Ventas y Marketing", videoId: "Sj78Ai-rqSg" },
+  { area: "Atención", nombre: "Pilar Alcocer", cargo: "Directora de Servicios", videoId: "wzbaSNujq-w" },
+  { area: "Operaciones", nombre: "Mariana Bortolotti", cargo: "Seguimiento Académico", videoId: "Vvwt_biwpnM" },
 ];
 
 const PRINCIPIOS = [
@@ -256,9 +256,9 @@ export default function App() {
         />
       </div>
     ) : (
-      <VideoCover title={m.area} subtitle={m.lead} grad={GRADS[i % GRADS.length]} />
+      <VideoCover title={m.area} subtitle={m.nombre} grad={GRADS[i % GRADS.length]} />
     )}
-    <p className="text-sm italic mt-2 px-1" style={{ color: C.sub }}>"{m.quote}"</p></div>
+    <p className="text-sm italic mt-2 px-1" style={{ color: C.sub }}>"{m.nombre}"</p></div>
                 ))}
               </div>
               <Card>
@@ -267,7 +267,7 @@ export default function App() {
                   <OrgBox name="Pablo Lamamié de Clairac" role="Rector" highlight />
                   <Connector />
                   <div className="flex gap-3 flex-wrap justify-center">
-                    {MAPA_VALOR.map((m) => <OrgBox key={m.area} name={m.lead} role={m.area} />)}
+                    {MAPA_VALOR.map((m) => <OrgBox key={m.area} name={m.nombre} role={m.area} />)}
                   </div>
                   <Connector />
                   <OrgBox name="Heldrich Santizo" role="Jefe Marketing y Comunicación" />
