@@ -258,7 +258,7 @@ export default function App() {
     ) : (
       <VideoCover title={m.area} subtitle={m.nombre} grad={GRADS[i % GRADS.length]} />
     )}
-    <p className="text-sm italic mt-2 px-1" style={{ color: C.sub }}>"{m.nombre}"</p></div>
+    <p className="text-sm mt-2 px-1" style={{ color: C.navy }}>{m.nombre} · {m.cargo}</p></div>
                 ))}
               </div>
               <Card>
